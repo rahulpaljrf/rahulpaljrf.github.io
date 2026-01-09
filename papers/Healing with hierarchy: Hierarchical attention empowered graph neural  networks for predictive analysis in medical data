@@ -1,4 +1,4 @@
-Key contributions of the proposed HAIL framework are as follows: 1. Hierarchical attention: In HAIL, we introduce a novel hierarchical attention-based integrated learning mechanism. that employs
+Key contributions of the proposed Work: 1. Hierarchical attention: In HAIL, we introduce a novel hierarchical attention-based integrated learning mechanism. that employs
 hierarchical attention at two levels: first, at the sentence level for context-aware embedding extraction, and second, at the feature level for addressing missing values. The innovation of 
 this approach lies in its capacity to utilize hierarchical attention for context-aware embedding extraction while learning from a patient’s attributes (local features) to fill in missing 
 values. 2. Learning from cohorts: To enhance information acquisition, we present a weighted patient graph that leverages the features of patients derived from their associated cohort 
