@@ -1,8 +1,36 @@
-\textbf{Key contributions of the proposed Work:}
-1. Hierarchical attention: In HAIL, we introduce a novel hierarchical attention-based integrated learning mechanism. that employs
-hierarchical attention at two levels: first, at the sentence level for context-aware embedding extraction, and second, at the feature level for addressing missing values. The innovation of 
-this approach lies in its capacity to utilize hierarchical attention for context-aware embedding extraction while learning from a patient’s attributes (local features) to fill in missing 
-values. 
-2. Learning from cohorts: To enhance information acquisition, we present a weighted patient graph that leverages the features of patients derived from their associated cohort 
-(global features) to enrich the patient embeddings.
+## Key Contributions
 
+### 1. Hierarchical Attention (Core Idea)
+
+> **Paper says:**  
+> *We introduce a novel hierarchical attention-based integrated learning mechanism that employs hierarchical attention at two levels.*
+
+**What this means (my understanding):**  
+The model applies attention twice:
+- **Sentence-level attention** to extract context-aware embeddings from text.
+- **Feature-level attention** to handle missing patient attributes.
+
+**Why this is important:**  
+Most models treat missing values as a preprocessing problem.  
+This approach **learns to infer missing information directly from patient-specific features**, which is more realistic in clinical data.
+
+**Key takeaway:**  
+**Hierarchical attention is not only used for representation learning but also for imputing missing values.**
+
+### 2. Learning from Cohorts (Global Context)
+
+> **Paper says:**  
+> *We present a weighted patient graph that leverages features of patients derived from their associated cohort.*
+
+**What this means:**  
+Each patient is not treated independently. Instead:
+- Patients are represented as **nodes in a graph**
+- Edges encode similarity between patients
+- Information flows from **cohort-level patterns** to individual embeddings
+
+**Why this matters:**  
+Clinical data is sparse.  
+By learning from similar patients, the model gains **global context**, improving robustness and generalization.
+
+**Key insight:**  
+**Patient embeddings are enriched using cohort-level (global) information, not just individual records.**
