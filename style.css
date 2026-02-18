@@ -52,3 +52,45 @@ footer {
   font-size: 14px;
   color: #777;
 }
+.about-section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.profile-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.profile-content {
+  flex: 1;
+}
+
+.profile-content h2 {
+  margin-top: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
